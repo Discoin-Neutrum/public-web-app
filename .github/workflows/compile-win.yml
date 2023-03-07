@@ -26,7 +26,7 @@ jobs:
         uses: ColinPitrat/update-release@v1.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          directory: .\out\dsc-blockchain-alpha-win32-x64
+          directory: ./out/dsc-blockchain-alpha-win32-x64
           assets: ./release-win64.zip
       - name: Uploading release
         uses: ncipollo/release-action@v1
