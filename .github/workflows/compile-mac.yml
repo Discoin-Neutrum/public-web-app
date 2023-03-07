@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+          cache: "npm"
       - run: npm cache add @electron-forge/cli
       - run: npm install @electron-forge/cli
       - run: npx electron-forge import
