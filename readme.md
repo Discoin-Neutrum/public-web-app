@@ -1,4 +1,4 @@
-# web-app Discoin
+# web-app officielle de Discoin
 en alpha test
 
 dev: thebrainfox#4621
