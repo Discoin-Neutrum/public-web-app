@@ -1,0 +1,18 @@
+name: compile
+run-name: Compilation of webapp for windows
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  dependency-win:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install --save-dev electron @electron-forge/cli
+      - run: npx electron-forge import
+      - run: npm run make
