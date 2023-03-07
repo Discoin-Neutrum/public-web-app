@@ -28,8 +28,7 @@ jobs:
           type: 'zip'
           path: './out/dsc-blockchain-alpha-win32-x64'
           filename: 'release-win64.zip'
-      - name: Uploading release
-        uses: ncipollo/release-action@v1
+      - uses: actions/upload-artifact@v3
         with:
-          name: Release ${{ github.run_number }} - Windows x64
-          artifacts: "release-win64.zip"
+          name: 'win'
+          path: 'release-win64.zip'
