@@ -26,7 +26,7 @@ jobs:
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
-          path: './out/dsc-blockchain-alpha-darwin-x64/dsc-blockchain-alpha.app'
+          path: './out/dsc-blockchain-alpha-darwin-x64'
           filename: 'release-macos64.zip'
       - name: Uploading release
         uses: ncipollo/release-action@v1
