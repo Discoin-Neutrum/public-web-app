@@ -1,0 +1,135 @@
+:root {
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-darker: #292b2f;
+  --background-darkest: #202225;
+
+  --text-primary: #dcddde;
+  --text-secondary: #b5b5b5;
+  --text-disabled: #72767d;
+  --text-link: #5865f2;
+  --text-sucess: #4fdc7b;
+
+  --accent-primary: #36393f;
+  --accent-blurple: #5865f2;
+  --accent-red: #f9726f;
+  --accent-green: #90ff94;
+  --accent-yellow: #fcf19c;
+  --accent-light-blue: #6fc2f9;
+  --accent-blue: #6f7af9;
+  --accent-orange: #faa25f;
+  --accent-exchange: #f9bc06;
+
+  --font-title: "Uni Sans";
+  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.content {
+  margin-top: 150px;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--background-secondary);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  height: 450px;
+  width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.card img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: auto;
+  /* border-radius: 50%; */
+  transition: 0.3s 0.2s;
+}
+
+.card img:hover{
+  scale: 1.1;
+}
+
+.card {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  padding: 32px;
+  max-width: 400px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 16px 0;
+  color: var(--text-secondary);
+}
+
+.card a{
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 5px;
+  color: var(--text-primary);
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  transition: all 0.2s 0s ease-in-out;
+}
+
+.card a:hover{
+  background-color: var(--accent-blurple);
+}

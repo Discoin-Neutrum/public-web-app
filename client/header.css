@@ -1,0 +1,306 @@
+body {
+  background-color: var(--background-primary);
+  margin: 0;
+  font-family: var(--font-normal);
+}
+
+:root {
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-darker: #292b2f;
+  --background-darkest: #202225;
+
+  --text-primary: #dcddde;
+  --text-secondary: #b5b5b5;
+  --text-disabled: #72767d;
+  --text-link: #5865f2;
+  --text-sucess: #4fdc7b;
+
+  --accent-primary: #36393f;
+  --accent-blurple: #5865f2;
+  --accent-red: #f9726f;
+  --accent-green: #90ff94;
+  --accent-yellow: #fcf19c;
+  --accent-light-blue: #6fc2f9;
+  --accent-blue: #6f7af9;
+  --accent-orange: #faa25f;
+  --accent-exchange: #f9bc06;
+
+  --font-title: "Uni Sans";
+  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text {
+  color: var(--text-primary);
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid var(--text-secondary);
+}
+
+.topnav {
+  overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--background-darkest);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.topnav a img {
+  width: 75px;
+  height: 75px;
+}
+
+.topnav a.logo {
+  padding: 5px;
+  transition: ease-in-out 0.3s;
+}
+
+.topnav a.logo:hover {
+  transform: scale(1.2);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.2s;
+  transition: all 0.2s ease-in-out;
+}
+
+.topnav a:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.topnav a.active {
+  color: var(--text-disabled);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    padding: 15px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.solde,
+.solde-exchange {
+  width: 150px;
+  height: 70px;
+  background-color: var(--background-darkest);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--accent-primary);
+  position: relative;
+  user-select: none;
+  transition: border-color 0.3s 0.1s;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.solde:hover,
+.solde-exchange:hover,
+.account:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.solde:hover {
+  border-color: var(--accent-blurple);
+}
+
+.solde-exchange:hover {
+  border-color: var(--accent-exchange);
+}
+
+.account:hover {
+  border-color: var(--text-primary);
+}
+
+.solde:hover .value .wallet {
+  color: var(--accent-blurple);
+}
+
+.solde-exchange:hover .value .wallet {
+  color: var(--accent-exchange);
+}
+
+.solde .value,
+.solde-exchange .value {
+  font-size: 26px;
+  text-align: center;
+  position: relative;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.solde .value span,
+.solde-exchange .value span {
+  padding: 5px;
+}
+
+.solde .value .wallet {
+  user-select: text;
+  color: var(--accent-blurple);
+  transition: color 0.3s 0.1s;
+}
+
+.solde-exchange .value .wallet {
+  user-select: text;
+  color: var(--accent-exchange);
+  transition: color 0.3s 0.1s;
+}
+
+.solde .value .devise,
+.solde-exchange .value .devise {
+  color: var(--text-secondary);
+}
+
+.solde .desc,
+.solde-exchange .desc {
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  color: var(--text-secondary);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  position: absolute;
+  display: flex;
+  right: 10px;
+}
+
+.solde,
+.solde-exchange,
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.account {
+  min-width: 150px;
+  height: 70px;
+  background-color: var(--background-darkest);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--accent-primary);
+  position: relative;
+  user-select: none;
+  transition: border-color 0.3s 0.3s;
+  margin: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.account .guest,
+.account .user {
+  font-size: 20px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.account .guest *,
+.account .user * {
+  display: inline-block;
+  margin: 5px;
+}
+
+.account .guest svg,
+.account .user svg {
+  transform: rotate(90deg);
+  scale: 2;
+}
+
+.account .guest svg,
+.account .user svg {
+  animation-delay: 0.5s;
+}
+
+.account:hover .guest svg,
+.account:hover .user svg {
+  animation: alternate translateX 1s infinite;
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(-5px) rotate(90deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(90deg);
+  }
+}
+
+.guest,
+.user {
+  visibility: hidden;
+  display: block;
+}
+
+.guest {
+  transform: translateY(50%);
+}
+
+.user {
+  transform: translateY(-50%);
+}
+
+.guest.active,
+.user.active {
+  visibility: visible;
+}

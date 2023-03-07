@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Discoin app | connected with thebrainfox#4621</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="topnav">
+      <!-- align left -->
+      <div class="left">
+        <a href="./index.html" class="logo">
+          <img src="discoin_logo.png"
+            alt="discoin logo, wich represent a stylised D letter clored in blue. the letter D stand for the first letter of discoin">
+        </a>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="add_bot/index.html">Ajouter le bot</a>
+        <a href="mine/index.html">Miner</a>
+        <a href="trade/index.html">Trader</a>
+        <a href="virement/index.html">Virement</a>
+        <a href="stats/index.html">Stats</a>
+        <a href="help/index.html">Aide</a>
+        <a href="p2p/index.html">p2p</a>
+      </div>
+      <!-- align right -->
+      <div class="right">
+        <!-- solde -->
+        <div class="solde" onclick="window.open('solde/index.html', '_self')">
+          <span class="value"><span class="wallet">739</span><span class="devise">DSC</span></span>
+          <span class="desc">Solde actuel</span>
+          <div class="line"></div>
+        </div>
+        <!-- solde placé -->
+        <div class="solde-exchange" onClick="window.open('solde/exchange/index.html', '_self')">
+          <span class="value"><span class="wallet">54</span><span class="devise">DSC</span></span>
+          <span class="desc">Solde placé</span>
+          <div class="line"></div>
+        </div>
+
+        <!-- account/connect -->
+        <div class="account">
+          <div class="guest" onclick="window.open('sign-in/index.html', '_self')">
+            <span>sign in</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 15L12 9L6 15" stroke="#dcddde" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="user active" onclick="window.open('account/index.html', '_self')">
+            <span class="username">thebrainfox#4621</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 15L12 9L6 15" stroke="#dcddde" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div id="mySlider"></div>
+    <div id="sliderNav">
+      <div id="sliderPrev" onclick="prevSlide();">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+          <path fill="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+        </svg>
+      </div>
+      <div id="sliderNext" onclick="nextSlide();">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+          <path fill="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+        </svg>
+      </div>
+    </div>
+    <div class="element">
+      <div class="send" id="send">
+        <h2>Virement</h2>
+        <img src="./virement.png" class="img-bg">
+        <h3>Effectuer un virement du montant de Discoins souhaité vers n'importe quel utilisateur et générer une
+          facture.</h3>
+        <a class="button" href="virement/index.html">Effectuer un virement</a>
+      </div>
+      <div class="stats" id="stats">
+        <h2>Stats</h2>
+        <img src="./stats.png" class="img-bg">
+        <h3>Afficher des statistiques détaillées pour analyser le cours du marché et essayer de le prédire</h3>
+        <a class="button" href="stats/index.html">Afficher les statistiques</a>
+      </div>
+      <div class="acheter" id="acheter">
+        <h2>Trader</h2>
+        <img src="./trade.png" class="img-bg">
+        <h3>Accéder aux options de trade de Discoins pour acheter et mettre en vente des Discoins au meilleur moment
+        </h3>
+        <a class="button" href="trade/index.html">Trader des Discoins</a>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Miner des Discoins</h2>
+      <img src="./discoin_logo.png">
+      <h3>Miner des Discoins pour permettre à la blockchain de fonctioner et de générer des revenus</h3>
+      <a class="button" href="mine/index.html">Miner des Discoins</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
