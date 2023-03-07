@@ -28,8 +28,7 @@ jobs:
           type: 'zip'
           path: './out/dsc-blockchain-alpha-darwin-x64'
           filename: 'release-macos64.zip'
-      - name: Uploading release
-        uses: ncipollo/release-action@v1
+      - uses: actions/upload-artifact@v3
         with:
-          name: Release ${{ github.run_number }} - MacOS x64
-          artifacts: "release-macos64.zip"
+          name: 'macos'
+          path: 'release-macos64.zip'
