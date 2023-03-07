@@ -23,11 +23,11 @@ jobs:
       - name: Compilling
         run: npm run make
       - name: Zipping files
-        uses: ColinPitrat/update-release@v1.0.1
+        uses: thedoctor0/zip-release@0.7.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          directory: ./out/dsc-blockchain-alpha-win32-x64
-          assets: ./release-win64.zip
+          type: 'zip'
+          path: './out\dsc-blockchain-alpha-win32-x64'
+          filename: 'release-win64.zip'
       - name: Uploading release
         uses: ncipollo/release-action@v1
         with:
