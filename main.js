@@ -10,6 +10,8 @@ const p2pPort = 80;
 const peers = [];
 const replies = [];
 
+//test
+
 ipcMain.on('asynchronous-message', (event, arg) => {
   arg = JSON.parse(arg)
   if (arg.action === "start") {
