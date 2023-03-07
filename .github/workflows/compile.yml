@@ -14,5 +14,5 @@ jobs:
         run: npm install --save-dev electron
         run: npm install --save-dev @electron-forge/cli
         run: npx electron-forge import
-      - name: Compi
+      - name: Compilation
         run: npm run make
