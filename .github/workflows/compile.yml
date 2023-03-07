@@ -3,16 +3,24 @@ run-name: Compilation of webapp for windows
 on:
   push:
     branches:
-      - master
+      - release
 
 jobs:
-  build:
+  build-win:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm install --save-dev electron
-        run: npm install --save-dev @electron-forge/cli
+        run: npm install --save-dev electron @electron-forge/cli
+        run: npx electron-forge import
+      - name: Compi
+        run: npm run make
+    build-mac:
+    runs-on: darwin-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install --save-dev electron @electron-forge/cli
         run: npx electron-forge import
       - name: Compilation
         run: npm run make
