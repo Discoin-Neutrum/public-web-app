@@ -3,7 +3,10 @@ en alpha test
 
 dev: thebrainfox#4621
 
-# installation
+# Pre-release
+Si vous êtes sur windows en 64 bits ou mac en 64 bits vous pouvez télécharger la version de la webapp qui correspond.
+
+# Compilation manuelle
 
 requis: nodejs (avec npm)
 
@@ -34,3 +37,4 @@ C:\\path-to-dir\web-app\out\make\squirrel.windows\x64\dsc-blockchain-alpha-1.0.0
 /Users/nom-d-utilisateur/path-to-dir/web-app/out/dsc-blockchain-alpha-darwin-x64/dsc-blockchain-alpha.app
 ````
 ces chemins sont des exemples qui montrent des chemins possibles vers l'exécutable. ce chemin est surement inexacte, car selon la version d'electron et les parametres de compilation qui peuvent changer selon la version que vous utilisez et votre plateforme. le chemin d'acces aux executables devrait cependant ressembler à ce que vous allez rencontrer. 
+
