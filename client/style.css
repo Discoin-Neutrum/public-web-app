@@ -1,0 +1,295 @@
+:root {
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-darker: #292b2f;
+  --background-darkest: #202225;
+
+  --text-primary: #dcddde;
+  --text-secondary: #b5b5b5;
+  --text-disabled: #72767d;
+  --text-link: #5865f2;
+  --text-sucess: #4fdc7b;
+
+  --accent-primary: #36393f;
+  --accent-blurple: #5865f2;
+  --accent-red: #f9726f;
+  --accent-green: #90ff94;
+  --accent-yellow: #fcf19c;
+  --accent-light-blue: #6fc2f9;
+  --accent-blue: #6f7af9;
+  --accent-orange: #faa25f;
+  --accent-exchange: #f9bc06;
+
+  --font-title: "Uni Sans";
+  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.content {
+  margin-top: 125px;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+}
+
+.welcome,
+.getUsername {
+  font-size: 75px;
+  color: var(--text-primary);
+  padding: 10px;
+}
+
+h1 {
+  font-size: 48px;
+  padding: 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+  color: var(--text-primary);
+}
+
+h4 {
+  font-size: 24px;
+  padding: 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+  color: var(--text-primary);
+}
+
+#mySlider a {
+  padding: 10px 15px;
+  background-color: var(--accent-blue);
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+  color: var(--text-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+#mySlider a:hover {
+  background-color: var(--accent-blurple);
+  transform: translateY(48%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#mySlider a svg {
+  transform: translateY(25%);
+}
+
+#mySlider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  top: -5px;
+}
+
+.singleSlide {
+  background-size: cover;
+  height: 450px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  top: 0px;
+}
+
+.slideOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#sliderNav {
+  position: relative;
+  top: -225px;
+  font-size: 42px;
+}
+
+#sliderNav:hover {
+  cursor: pointer;
+}
+
+#sliderPrev {
+  transform: translateY(50%);
+  position: relative;
+  float: left;
+  left: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#sliderNext:hover,
+#sliderPrev:hover {
+  transform: translateY(48%);
+}
+
+#sliderNext {
+  transform: translateY(50%);
+  position: relative;
+  float: right;
+  right: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@-webkit-keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+.slideInRight {
+  left: -100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+  left: 100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 1s forwards;
+  animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+.slideOutRight {
+  -webkit-animation: slideOutRight 1s forwards;
+  animation: slideOutRight 1s forwards;
+}
+
+.element {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.send,
+.stats,
+.acheter {
+  background-color: var(--background-secondary);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid var(--background-darker);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.send:hover,
+.stats:hover,
+.acheter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.img-bg {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+h3 {
+  margin-top: -15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: var(--accent-blue);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--accent-blurple);
+}
+
+.card {
+  width: 87%;
+  margin: 95px;
+  margin-top: 15px;
+  background-color: var(--background-secondary);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid var(--background-darker);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2{
+  margin-bottom: 0;
+}
+
+.card img{
+  width: 10%;
+  padding-bottom: 10px;
+}
