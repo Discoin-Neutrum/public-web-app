@@ -2,7 +2,7 @@ name: compile
 run-name: Compilation of webapp for macos
 on:
   push:
-    branches: [main]
+    branches: [release]
 
 jobs:
   compilation:
