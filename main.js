@@ -10,7 +10,7 @@ const p2pPort = 80;
 const peers = [];
 const replies = [];
 
-//test
+// Wesh
 
 ipcMain.on('asynchronous-message', (event, arg) => {
   arg = JSON.parse(arg)
