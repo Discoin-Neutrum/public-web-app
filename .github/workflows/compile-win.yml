@@ -7,6 +7,8 @@ on:
 jobs:
   compilation:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - name: Setupping node
@@ -20,8 +22,14 @@ jobs:
         run: npx electron-forge import
       - name: Compilling
         run: npm run make
-      - name: Publishing release
-        uses: ColinPitrat/update-release@v1.0.1
+      - name: Zipping files
+        uses: ncipollo/release-action@v1.12.0
         with:
+          artifacts: "release-win64.zip"
+          directory: .\out\dsc-blockchain-alpha-win32-x64
           token: ${{ secrets.GITHUB_TOKEN }}
-          files: ./out/make/squirrel.windows/x64/dsc-blockchain-alpha-1.0.0/Setup.exe
+      - name: Uploading release
+        uses: ncipollo/release-action@v1
+        with:
+          name: Release ${{ github.run_number }} - Windows x64
+          artifacts: "release-win64.zip"
