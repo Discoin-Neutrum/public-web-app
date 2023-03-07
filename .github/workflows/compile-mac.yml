@@ -1,18 +1,26 @@
 name: compile
 run-name: Compilation of webapp for macos
-on:
+on: 
   push:
-    branches: [main]
+    branches: [release]
 
 jobs:
   compilation:
-    runs-on: macos-latest
+    runs-on: darwin-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setupping node
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm cache add @electron-forge/cli
-      - run: npm install @electron-forge/cli
-      - run: npx electron-forge import
-      - run: npm run make
+      - name: Installing electron
+        run: npm install --save-dev electron @electron-forge/cli
+      - name: Finalizing electron installation
+        run: npx electron-forge import
+      - name: Compilling
+        run: npm run make
+      - name: Publishing release
+        uses: ColinPitrat/update-release@v1.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: ./out/dsc-blockchain-alpha-darwin-x64/dsc-blockchain-alpha.app
