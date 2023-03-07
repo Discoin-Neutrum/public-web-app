@@ -13,9 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm install --save-dev electron @electron-forge/cli
         run: npx electron-forge import
-      - name: Compi
+      - name: Compilation
         run: npm run make
-    build-mac:
+  build-mac:
     runs-on: darwin-latest
     steps:
       - uses: actions/checkout@v2
