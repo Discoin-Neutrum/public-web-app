@@ -1,5 +1,5 @@
 name: compile
-run-name: Compilation of webapp for windows
+run-name: Compilation of webapp for macos
 on: [push]
 
 jobs:
