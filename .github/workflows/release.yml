@@ -1,0 +1,21 @@
+name: release
+run-name: Releasing packages
+on:
+  workflow_run:
+    workflows: [compile-win, compile-mac]
+    types: completed
+jobs:
+  uploading:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Wait
+          run: sleep 2m
+        - name: Download MacOS artifact
+          uses: actions/download-artifact@v3.0.2
+          with:
+            name: macos
+        - name: Download Windows artifact
+          uses: actions/download-artifact@v3.0.2
+          with:
+            name: win
+      
