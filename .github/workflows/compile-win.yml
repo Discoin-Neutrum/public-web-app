@@ -14,7 +14,7 @@ jobs:
       - name: Setupping node
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '16'
           cache: "npm"
       - name: Installing electron
         run: npm install --save-dev electron @electron-forge/cli
