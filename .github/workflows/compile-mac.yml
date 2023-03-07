@@ -1,19 +1,35 @@
 name: compile
-run-name: Compilation of webapp for macos
-on:
+run-name: Compilation of webapp for mac
+on: 
   push:
     branches: [release]
 
 jobs:
   compilation:
-    runs-on: macos-latest
+    runs-on: darwin-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setupping node
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
           cache: "npm"
-      - run: npm cache add @electron-forge/cli
-      - run: npm install @electron-forge/cli
-      - run: npx electron-forge import
-      - run: npm run make
+      - name: Installing electron
+        run: npm install --save-dev electron @electron-forge/cli
+      - name: Finalizing electron installation
+        run: npx electron-forge import
+      - name: Compilling
+        run: npm run make
+      - name: Zipping files
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "release-darwin64.zip"
+          directory: ./out/dsc-blockchain-alpha-darwin-x64
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Uploading release
+        uses: ncipollo/release-action@v1
+        with:
+          name: Release ${{ github.run_number }} - MacOS x64
+          artifacts: "release-darwin64.zip"
